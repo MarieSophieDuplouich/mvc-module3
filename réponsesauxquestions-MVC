@@ -8,6 +8,8 @@ Model correspond aux requêtes SQL et la bdd
 Controller correspond aux fonctions. il fait le lien entre un modèle et une vue. On associe une URL à un contrôleur.
 
 
+Le MVC sert à avoir une seule entrée php  avec des routes.
+
 //// cours de Massi ci-dessous
 https://github.com/CHAOUCHI/cdpi-dwwm/blob/1-phase2-use-case-projects-mvc/Phase%202%20-%20MVC%20REST%20et%20SPA/3.%20MVC%20OOP%20/Cours/1.%20Intro.md
 
@@ -81,5 +83,15 @@ Le contrôleur ProductController appellera la méthode show avec comme paramètr
 2- Mise en place Lamp
 
 Sur quel port tourne le serveur webapache ?
+Il tourne sur le port 8080.
 
 Sur quel port tourne le serveur phpmyadmin ?
+
+Il tourne sur le port 8081.
+
+3- La classe App dans un fichier php précis (souvent le fihcier index.php) est le fichier qui permet
+au site web de fonctionner c'est là que tout se passe.
+
+L'intérêt de la fet console par rapport au vardump -> je ne sais pas du tout pour l'instant
+
+https://github.com/CHAOUCHI/cdpi-dwwm/blob/1-phase2-use-case-projects-mvc/Phase%202%20-%20MVC%20REST%20et%20SPA/3.%20MVC%20OOP%20/Cours/3.%20I%20-%20Architecture%20-%20main%20et%20htaccess.md
