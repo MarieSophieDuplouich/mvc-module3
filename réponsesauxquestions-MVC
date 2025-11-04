@@ -1,10 +1,81 @@
-1-Un MVC signifie Media Vue Controller. C'est l'exemple de Symfony.
+1-Un MVC signifie Media Vue Controller. C'est l'exemple de Symfony (on peut le fair aussi en php).
 Cela permet de séparer les bouts des codes et de les mieux organiser. 
 On n'a pas tous les codes ensembles dans un seul ficher.
 
 La vue correspond au front-end (affichage de la page).
 Model correspond aux requêtes SQL et la bdd
 
-Controller correspond aux fonctions.
+Controller correspond aux fonctions. il fait le lien entre un modèle et une vue. On associe une URL à un contrôleur.
+
+
+//// cours de Massi ci-dessous
+https://github.com/CHAOUCHI/cdpi-dwwm/blob/1-phase2-use-case-projects-mvc/Phase%202%20-%20MVC%20REST%20et%20SPA/3.%20MVC%20OOP%20/Cours/1.%20Intro.md
+
+Le design pattern MVC défini le code boilerplate d'une application web et permet d'en accélerer le développement.
+
+Nous allons apprendre à coder un MVC en "vanilla PHP" c'est à dire uniquement avec PHP sans aucune extension ou framework. Plus tard vous utiliserez des frameworks comme Symfony ou Laravel qui vous fournissent tout le code boilerplate pour que vous n'ayez plus qu'à y ajouter votre logique métier.
+
+Model
+Le Modèle à un accès direct à la base de donnée, il fournit des méthodes publiques simples d'utilisation pour épargner au développeur l'écriture des requêtes SQL.
+
+La création d'une classe Entity qui représente les lignes de la table.
+La création d'une classe Model qui représente la table. Elle possède des méthodes publiques pour effectuer les actions CRUD sur la table : sélection d'une ou plusieurs entités , ajout, suppression et modification.
+
+
+
+
+Un modèle est une représentation objet de la table. Une entité est une représentation objet d'une ligne de la table.
+
+Les modèles sont contenu dans le dossier :
+/app
+ - /models
+Voici un exemple de Model en PHP:
+
+class ProductModel{
+    private PDO $bdd;
+    private PDOStatement $addProduct;
+
+    function __construct()
+    {
+        $this->bdd = new PDO("mysql:host=lamp-mysql;dbname=boutique","root","root");
+        $this->addProduct = $this->bdd->prepare("INSERT INTO `Produit`
+         (name,price,image) VALUES(:name,:price,:image);");
+    }
+
+    public function add(string $name, float $price,string $image) : void
+    {
+        $this->addProduct->bindValue("name",$name);
+        $this->addProduct->bindValue("price",$price);
+        $this->addProduct->bindValue("image",$image);
+        $this->addProduct->execute();
+    }
+}
+
+$productModel = new ProductModel();
+$productModel->add("Air max taille 42",120.99,"/images/airmax.png");
+echo "Un nouveau produit à été ajouté à la BDD regardez dans phpMyAdmin"
+
+La création d'un Controller se fait en plusieurs étapes :
+
+La création d'une classe Controller.
+L'ajout de méthodes publiques à la classe pour chaque url possibles.
+Par exemple si les urls possibles de mon contrôleur sont :
+
+/product/add
+/product/show
+/product/delete
+J'ajoute trois méthodes publiques nommées :
+
+ProductController::add()
+ProductController::show()
+ProductController::delete()
+Chaqu'une de ces méthodes appelera une vue et demandera éventuellement des données à un modèle.
+
+Par exemple si le client tape l'url :
+
+localhost/product/show/3
+Le contrôleur ProductController appellera la méthode show avec comme paramètre 3.
+
+//// cours de Massi fin
 
 2-
