@@ -100,6 +100,10 @@ Pour l'instant la méthode start affichera simplement un "Hello World" mais c'es
 ///Massi cours fin 
 
 L'intérêt de la get console par rapport au vardump -> je ne sais pas du tout pour l'instant
-c'est pour débugger plus simplement ?
+c'est pour débugger plus simplement.
+
+4-Mise en place du model 
+
+
 
 https://github.com/CHAOUCHI/cdpi-dwwm/blob/1-phase2-use-case-projects-mvc/Phase%202%20-%20MVC%20REST%20et%20SPA/3.%20MVC%20OOP%20/Cours/3.%20I%20-%20Architecture%20-%20main%20et%20htaccess.md
