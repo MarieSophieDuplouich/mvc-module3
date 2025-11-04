@@ -1,0 +1,10 @@
+1-Un MVC signifie Media Vue Controller. C'est l'exemple de Symfony.
+Cela permet de séparer les bouts des codes et de les mieux organiser. 
+On n'a pas tous les codes ensembles dans un seul ficher.
+
+La vue correspond au front-end (affichage de la page).
+Model correspond aux requêtes SQL et la bdd
+
+Controller correspond aux fonctions.
+
+2-
