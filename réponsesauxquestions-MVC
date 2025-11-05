@@ -1,6 +1,8 @@
-1-Un MVC signifie Media Vue Controller. C'est l'exemple de Symfony (on peut le fair aussi en php).
-Cela permet de séparer les bouts des codes et de les mieux organiser. 
-On n'a pas tous les codes ensembles dans un seul ficher.
+1-Un MVC signifie Media Vue Controller. C'est l'exemple de Symfony (on peut le faire aussi en php).
+Cest un design pattern
+
+2-Cela permet de séparer les bouts des codes et de les mieux organiser. 
+On n'a pas tous les codes ensembles dans un seul fichier.
 
 La vue correspond au front-end (affichage de la page).
 Model correspond aux requêtes SQL et la bdd
@@ -80,17 +82,19 @@ Le contrôleur ProductController appellera la méthode show avec comme paramètr
 
 //// cours de Massi fin
 
-2- Mise en place Lamp
+3- Mise en place Lamp
 
 Sur quel port tourne le serveur webapache ?
 Il tourne sur le port 8080.
 
-Sur quel port tourne le serveur phpmyadmin ?
+4-Sur quel port tourne le serveur phpmyadmin ?
 
 Il tourne sur le port 8081.
 
-3- La classe App dans un fichier php précis ( le fichier index.php) est le fichier qui permet
-au site web de fonctionner c'est là que tout se passe. c'est le poitn d'entrée
+5-A quoi sert la calsse App ?
+
+ La classe App  est dans un fichier php précis ( le fichier index.php) qui permet
+au site web de fonctionner c'est là que tout se passe. c'est le point d'entrée.
 
 ///Massi cours
 La classe App
@@ -99,10 +103,18 @@ La classe App est le point de départ de notre application rien ne se trouve en 
 Pour l'instant la méthode start affichera simplement un "Hello World" mais c'est ici que, plus tard, les urls seront lu et que les Controller seront appelés.
 ///Massi cours fin 
 
-L'intérêt de la get console par rapport au vardump -> je ne sais pas du tout pour l'instant
-c'est pour débugger plus simplement.
+6 - quel est L'intérêt de la get console par rapport au vardump ? Quel est l'intérêt de la fonction console ?
+C'est pour débugger plus simplement. Pour la deuxième question console.log c'est pour voir si c'est la fonction fonctionne ou non ( on voit les valeurs null undefinded etc...) dans l'inspecteur du navigateur.
 
-4-Mise en place du model 
+7- Quel est le format d'une route en MVC  ?
+
+Après le http, la valeur de la route est en URI.
+
+Plus précisément,  l'URI d'un lien MVC respecte le format "/controller_name/method/param" :
+
+localhost:8080/controller_name/method/param
+
+4-Mise en place du model  (en cours)
 
 
 
