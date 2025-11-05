@@ -111,6 +111,8 @@ L'URI d'un lien MVC respecte le format "/controller_name/method/param" :
 
 localhost:8080/controller_name/method/param
 
+
+
 4-Mise en place du model  (en cours)
 
 
