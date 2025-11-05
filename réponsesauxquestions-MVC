@@ -1,13 +1,13 @@
-1-Un MVC signifie Media Vue Controller. C'est l'exemple de Symfony (on peut le faire aussi en php).
-Cest un design pattern
+1-Un MVC signifie Media Vue Controller. C'est un design pattern
+. Par exemple Symfony est un design pattern (on peut le faire aussi en php).
 
-2-Cela permet de séparer les bouts des codes et de les mieux organiser. 
-On n'a pas tous les codes ensembles dans un seul fichier.
+2-Cela permet de séparer la logique et de mieux organiser. 
+
 
 La vue correspond au front-end (affichage de la page).
 Model correspond aux requêtes SQL et la bdd
 
-Controller correspond aux fonctions. il fait le lien entre un modèle et une vue. On associe une URL à un contrôleur.
+Controller est une classe qui contient des méthodes, chaque méthode est une route de mon application.. il fait le lien entre un modèle et une vue. On associe une URL à une méthode.
 
 
 Le MVC sert à avoir une seule entrée php  avec des routes.
@@ -91,10 +91,9 @@ Il tourne sur le port 8080.
 
 Il tourne sur le port 8081.
 
-5-A quoi sert la calsse App ?
+5-A quoi sert la classe App ?
 
- La classe App  est dans un fichier php précis ( le fichier index.php) qui permet
-au site web de fonctionner c'est là que tout se passe. c'est le point d'entrée.
+ La classe App  est un  point d'entrée.
 
 ///Massi cours
 La classe App
@@ -104,13 +103,11 @@ Pour l'instant la méthode start affichera simplement un "Hello World" mais c'es
 ///Massi cours fin 
 
 6 - quel est L'intérêt de la get console par rapport au vardump ? Quel est l'intérêt de la fonction console ?
-C'est pour débugger plus simplement. Pour la deuxième question console.log c'est pour voir si c'est la fonction fonctionne ou non ( on voit les valeurs null undefinded etc...) dans l'inspecteur du navigateur.
+C'est pour débugger plus simplement. Console avec son ob_start ça permet de stopper l'envoi de réponses http aux clients.
 
 7- Quel est le format d'une route en MVC  ?
 
-Après le http, la valeur de la route est en URI.
-
-Plus précisément,  l'URI d'un lien MVC respecte le format "/controller_name/method/param" :
+L'URI d'un lien MVC respecte le format "/controller_name/method/param" :
 
 localhost:8080/controller_name/method/param
 
